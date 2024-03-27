@@ -86,7 +86,7 @@ export const extractRoleFromLogHandler = async (
         case "permissions": {
           changeRecord.permissions = new PermissionsBitField(
             change?.old as PermissionResolvable,
-          );
+          ).toArray();
           break;
         }
         case "color": {
